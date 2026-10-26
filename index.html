@@ -542,7 +542,7 @@ function setupCar(car){
   if(car.dataset.ready)return;car.dataset.ready=1;
   const track=car.querySelector('.ctrack'),slides=[...track.children],count=car.querySelector('.ccount'),tabs=car.querySelector('.ctabs');
   let idx=0;
-  const go=i=>{idx=(i+slides.length)%slides.length;track('project_view',{project:slides[idx].dataset.name});track.scrollTo({left:slides[idx].offsetLeft-track.offsetLeft,behavior:'smooth'});mark();};
+  const go=i=>{idx=(i+slides.length)%slides.length;window.track('project_view',{project:slides[idx].dataset.name});track.scrollTo({left:slides[idx].offsetLeft-track.offsetLeft,behavior:'smooth'});mark();};
   const mark=()=>{count.textContent=(slides[idx].dataset.name||'')+'  ·  '+(idx+1)+' / '+slides.length;if(tabs)[...tabs.children].forEach((b,j)=>b.setAttribute('aria-selected',j===idx));};
   if(tabs)slides.forEach((sl,j)=>{const b=document.createElement('button');b.type='button';b.setAttribute('role','tab');b.textContent=sl.dataset.name;b.onclick=()=>go(j);tabs.appendChild(b);});
   car.querySelectorAll('.carr').forEach(b=>b.onclick=()=>go(idx+ +b.dataset.d));
