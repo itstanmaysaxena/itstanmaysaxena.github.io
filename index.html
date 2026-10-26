@@ -1,0 +1,583 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tanmay Saxena · Senior QA Engineer</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://tanmaysaxena.is-a.dev/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Tanmay Saxena · Senior QA Engineer">
+<meta property="og:description" content="Engineered for flawless launches: web, mobile and IoT products tested from first build to launch day, with Playwright, Appium and AI agents.">
+<meta property="og:image" content="https://tanmaysaxena.is-a.dev/og.jpg">
+<meta property="og:url" content="https://tanmaysaxena.is-a.dev/">
+<meta name="twitter:card" content="summary_large_image">
+<script>
+/* Analytics: Microsoft Clarity + Google Analytics 4. Fill in the two IDs; empty = off. */
+window.SITE_ANALYTICS={clarity:"",ga4:""};
+(function(a){
+  var ref=new URLSearchParams(location.search).get("ref");
+  if(ref){try{sessionStorage.setItem("ref",ref)}catch(e){}} else {try{ref=sessionStorage.getItem("ref")}catch(e){}}
+  window.SITE_REF=ref||"direct";
+  if(a.clarity){(function(c,l,a2,r,i,t,y){c[a2]=c[a2]||function(){(c[a2].q=c[a2].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script",a.clarity);clarity("set","ref",window.SITE_REF);}
+  if(a.ga4){var g=document.createElement("script");g.async=1;g.src="https://www.googletagmanager.com/gtag/js?id="+a.ga4;document.head.appendChild(g);window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments)};gtag("js",new Date());gtag("config",a.ga4,{ref:window.SITE_REF});gtag("set","user_properties",{ref:window.SITE_REF});}
+})(window.SITE_ANALYTICS);
+/* One call for every interaction we want to see in the dashboards. */
+window.track=function(name,params){params=Object.assign({ref:window.SITE_REF},params||{});try{if(window.gtag)gtag("event",name,params);if(window.clarity)clarity("event",name);}catch(e){}};
+</script>
+
+<meta name="description" content="Tanmay Saxena, Senior QA Engineer. Engineered for flawless launches: web, mobile and IoT products tested from first build to launch day.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0a1110; --bg2:#0f1918; --panel:rgba(22,36,34,.72); --glass:rgba(18,30,29,.55);
+  --line:rgba(160,196,188,.16); --line2:rgba(160,196,188,.3);
+  --ink:#e8f0ee; --muted:#93a8a3; --mint:#b9d6ce; --mint2:#7fb3a6; --ok:#7fe0b5;
+  --mono:"JetBrains Mono",ui-monospace,monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1220px;margin:0 auto;padding:0 32px}
+.mono{font:500 11.5px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:12px 20px;border-radius:999px;font:500 14px Inter;text-decoration:none;border:1px solid var(--line2);color:var(--ink);background:transparent;cursor:pointer;transition:.25s}
+.btn:hover{border-color:var(--mint);background:rgba(185,214,206,.08)}
+.btn.solid{background:var(--ink);color:#0a1110;border-color:var(--ink)}
+.btn.solid:hover{background:var(--mint)}
+.glass{background:var(--glass);border:1px solid var(--line);border-radius:20px;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .9s ease,transform .9s ease}
+.reveal.in{opacity:1;transform:none}
+section{scroll-margin-top:70px}
+h2.h{margin:0;font:300 clamp(40px,5.5vw,72px)/1.05 Inter;letter-spacing:-.03em}
+h2.h b{font-weight:600}
+
+/* data rain */
+.rain{position:absolute;inset:0;overflow:hidden;pointer-events:none;mask-image:linear-gradient(to bottom,transparent,#000 15%,#000 70%,transparent)}
+.rain pre{position:absolute;top:-100%;margin:0;font:400 10.5px/1.5 var(--mono);color:rgba(185,214,206,.22);white-space:pre;animation:fall linear infinite}
+@keyframes fall{to{transform:translateY(200%)}}
+
+/* nav */
+nav.top{position:sticky;top:0;z-index:40;background:rgba(10,17,16,.78);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:600;font-size:18px;letter-spacing:-.01em}
+.links{display:flex;gap:4px}
+.links a{font:500 13px Inter;text-decoration:none;color:var(--muted);padding:8px 12px;border-radius:999px}
+.links a.on,.links a:hover{color:var(--ink);background:rgba(185,214,206,.08)}
+
+/* hero */
+.hero{position:relative;min-height:calc(100vh - 64px);display:flex;align-items:center;overflow:hidden;background:radial-gradient(ellipse at 70% 40%,#1d3a36 0%,#0f1d1b 38%,var(--bg) 70%)}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,17,16,.92) 0%,rgba(10,17,16,.75) 38%,rgba(10,17,16,0) 60%);pointer-events:none}
+.hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:40px;align-items:center;width:100%;padding-top:40px;padding-bottom:60px}
+.hero h1{margin:18px 0 0;font:300 clamp(48px,6.6vw,96px)/1.0 Inter;letter-spacing:-.04em}
+.hero h1 b{font-weight:600}
+.hero p.lead{max-width:540px;font-size:19px;color:#c7d5d1;margin:24px 0 30px}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap}
+.portrait{position:relative;aspect-ratio:4/5;border-radius:26px;overflow:hidden;border:1px solid var(--line);background:linear-gradient(180deg,#1a2c2a,#0b1312 85%)}
+.portrait img.me{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 20%;filter:grayscale(1) contrast(1.12) brightness(.82)}
+.portrait .tint{position:absolute;inset:0;background:linear-gradient(180deg,rgba(29,58,54,.35),rgba(10,17,16,.15) 40%,rgba(10,17,16,.85) 92%);mix-blend-mode:normal}
+.portrait .overlay{position:absolute;inset:0;font:400 10px/1.55 var(--mono);color:rgba(220,240,234,.28);padding:22px;white-space:pre;overflow:hidden;mix-blend-mode:screen}
+.portrait .ph{position:absolute;top:18px;right:18px}
+
+/* profile + twin */
+.twin{padding:110px 0;background:linear-gradient(var(--bg),var(--bg2))}
+.twin .grid{display:grid;grid-template-columns:360px minmax(0,1fr);gap:28px;align-items:start}
+.profile{padding:24px}
+.profile .av{width:72px;height:72px;border-radius:50%;background:linear-gradient(160deg,#25433f,#0e1a19);border:1px solid var(--line2);display:flex;align-items:center;justify-content:center}
+.profile .row{display:flex;justify-content:space-between;align-items:center}
+.profile h3{margin:14px 0 0;font-size:20px}
+.profile .handle{color:var(--muted);font-size:14px}
+.profile .facts{display:flex;flex-direction:column;gap:6px;margin:14px 0;font-size:14px;color:#c2d2ce}
+.profile .counts{display:flex;gap:18px;font-size:14px;color:var(--muted);border-top:1px solid var(--line);padding-top:12px}
+.profile .counts b{color:var(--ink)}
+.chat{padding:22px;min-height:360px;display:flex;flex-direction:column;gap:12px}
+.msg{max-width:82%;padding:12px 16px;border-radius:18px;font-size:15.5px;line-height:1.55}
+.msg.me{align-self:flex-end;background:var(--ink);color:#0a1110;border-bottom-right-radius:6px}
+.msg.ai{align-self:flex-start;background:rgba(185,214,206,.09);border:1px solid var(--line);border-bottom-left-radius:6px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.chips button{font:500 13px Inter;color:var(--ink);background:transparent;border:1px solid var(--line2);border-radius:999px;padding:9px 14px;cursor:pointer}
+.chips button:hover{background:rgba(185,214,206,.1)}
+.typing{font:400 12px var(--mono);color:var(--muted)}
+
+/* identity collage */
+.ident{padding:110px 0}
+.collage{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));grid-auto-rows:150px;gap:14px;margin-top:40px}
+.tile{position:relative;border-radius:18px;overflow:hidden;border:1px solid var(--line);background:linear-gradient(160deg,#c9d9d4,#9fb7b0)}
+.tile.dark{background:linear-gradient(160deg,#13201f,#0a1110)}
+.tile.teal{background:radial-gradient(ellipse at 50% 30%,#2a4a45,#0d1817 75%)}
+.t-building{grid-column:span 5;grid-row:span 2}
+.t-badge{grid-column:span 3;grid-row:span 2}
+.t-screen{grid-column:span 4;grid-row:span 2}
+.t-phone{grid-column:span 4;grid-row:span 2}
+.t-stat{grid-column:span 4;grid-row:span 2}
+.t-dock{grid-column:span 4;grid-row:span 2}
+.lanyard{position:absolute;left:50%;top:0;width:10px;height:22%;background:#1d1d1d;transform:translateX(-50%)}
+.badge{position:absolute;left:14%;right:14%;top:20%;bottom:8%;border-radius:14px;background:linear-gradient(180deg,#203a36,#0b1312);border:1px solid var(--line2);padding:16px;display:flex;flex-direction:column;justify-content:space-between;color:var(--ink)}
+.badge .bar{height:22px;background:repeating-linear-gradient(90deg,#d9e7e3 0 2px,transparent 2px 4px,#d9e7e3 4px 5px,transparent 5px 8px);opacity:.75}
+/* real app screens in the identity collage */
+.shots{position:absolute;inset:0;padding:22px 22px 0;display:flex;flex-direction:column;gap:14px}
+.shots .cap{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.shots .cap b{font:600 15px Inter;color:var(--ink)}
+.shots .row{flex:1;display:flex;gap:12px;align-items:flex-start;justify-content:center;min-height:0;overflow:hidden;mask-image:linear-gradient(to bottom,#000 72%,transparent)}
+.shots .row img{width:31%;height:auto;border-radius:14px 14px 0 0;border:1px solid var(--line2);border-bottom:0;box-shadow:0 14px 40px rgba(0,0,0,.45)}
+.shots .row img.solo{width:52%}
+.shots .row img.pair{width:44%}
+.shots .watch{flex:1;display:flex;gap:14px;align-items:center;justify-content:center;padding-bottom:22px}
+.shots .watch img{width:44%;max-width:150px;aspect-ratio:1;border-radius:50%;border:6px solid #1c2a28;box-shadow:0 0 0 1px var(--line2),0 14px 40px rgba(0,0,0,.5)}
+.bigstat{position:absolute;inset:0;padding:24px;display:flex;flex-direction:column;justify-content:space-between}
+.bigstat .v{font:300 84px/1 Inter;letter-spacing:-.04em}
+
+/* metrics */
+.metrics{padding:100px 0;background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.mgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:22px;overflow:hidden;margin-top:40px}
+.m{background:var(--bg2);padding:28px;min-height:230px;display:flex;flex-direction:column;gap:10px}
+.m .v{font:300 64px/1 Inter;letter-spacing:-.04em}
+.m .v small{font-size:.42em;color:var(--muted);margin-left:4px}
+.m .k{font:500 11px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--mint2)}
+.m p{margin:auto 0 0;font-size:14.5px;color:var(--muted);line-height:1.5}
+
+/* work */
+.work{padding:110px 0}
+.cases{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:40px}
+.case{border-radius:20px;overflow:hidden;border:1px solid var(--line);background:var(--bg2);display:flex;flex-direction:column}
+.case .img{position:relative;aspect-ratio:16/11;background:radial-gradient(ellipse at 50% 35%,#2a4a45,#0c1615 72%);overflow:hidden}
+.case .img pre{position:absolute;inset:0;margin:0;padding:14px;font:400 9.5px/1.5 var(--mono);color:rgba(185,214,206,.28);white-space:pre;overflow:hidden}
+.case .img .glyph{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%)}
+.case .body{padding:22px;display:flex;flex-direction:column;gap:8px;flex:1}
+.case h3{margin:0;font-size:22px;font-weight:600;letter-spacing:-.01em}
+.case .what{font-size:14px;color:var(--muted)}
+.case .did{font-size:15.5px;color:#d3e0dc}
+.case .tags{margin-top:auto;padding-top:12px;border-top:1px solid var(--line);font:500 11px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--mint2)}
+
+/* bug hunt */
+.hunt{padding:110px 0;background:radial-gradient(ellipse at 50% 50%,#16302c,var(--bg) 70%)}
+.hunt .grid{display:grid;grid-template-columns:minmax(0,1fr) 330px minmax(0,.9fr);gap:36px;align-items:center}
+.phone{width:330px;height:740px;border-radius:46px;background:#f4f7f6;border:10px solid #1a2322;outline:1px solid var(--line2);color:#111;overflow:hidden;margin:0 auto;box-shadow:0 30px 80px rgba(0,0,0,.6)}
+.phone .bar{display:flex;justify-content:space-between;padding:14px 20px 6px;font:600 13px Inter}
+.lockcard{margin:12px;border-radius:22px;background:#fff;padding:20px;text-align:center;box-shadow:0 4px 18px rgba(0,0,0,.06)}
+.lockicon{width:96px;height:96px;margin:8px auto;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#e4efec}
+.btnp{display:block;width:100%;margin-top:12px;padding:13px;border:0;border-radius:14px;background:#14302c;color:#fff;font:600 15px Inter;cursor:pointer}
+.prow{display:flex;justify-content:space-between;padding:12px 18px;border-bottom:1px solid #e7eceb;font-size:14px}
+.bug{cursor:crosshair;border-radius:4px;transition:background .2s,box-shadow .2s}
+.bug:focus-visible{outline:2px solid #4c8dff;outline-offset:2px}
+.bug.found{background:rgba(255,86,86,.16)!important;box-shadow:0 0 0 2px #ff5656!important;color:#c41d1d!important}
+.ck{padding:2px 14px 14px;display:flex;flex-direction:column;gap:7px;font-size:13.5px}
+.ckhead{display:flex;align-items:center;gap:10px;font-size:18px;margin:2px 0 6px}.ckback{font-size:24px;line-height:1;color:#666}
+.ckitem{display:grid;grid-template-columns:52px minmax(0,1fr) auto;gap:10px;align-items:center;background:#fff;border-radius:14px;padding:10px;box-shadow:0 2px 10px rgba(0,0,0,.05)}
+.ckitem span{display:block;color:#888;font-size:12px}
+.thumb{width:52px;height:52px;border-radius:10px;background:linear-gradient(140deg,#2b2b2b,#555)}
+.ckrow{display:flex;justify-content:space-between;color:#333;padding:2px 2px}
+.ckrow.tot{font-weight:700;font-size:16px;border-top:1px solid #e5e9e8;padding-top:9px;color:#111}
+.ckrow.small{font-size:12.5px;color:#666}
+.ckfield label{display:block;font-size:11.5px;color:#777;margin-bottom:4px}
+.inp{display:flex;justify-content:space-between;align-items:center;border:1px solid #d7dedc;border-radius:10px;padding:9px 11px;background:#fff}
+.ckstep{margin-left:auto;font:500 11px Inter;color:#888}
+.steps3{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;margin:-4px 0 4px}.steps3 i{height:4px;border-radius:4px;background:#dfe5e3}.steps3 i.done,.steps3 i.cur{background:#14302c}
+.stepper{display:flex;align-items:center;gap:8px;border:1px solid #d7dedc;border-radius:999px;padding:3px 6px;font-weight:600}
+.stepper button{border:0;background:none;font:600 15px Inter;color:#14302c;cursor:default;padding:0 3px}
+.ckcard{background:#fff;border-radius:14px;padding:10px 12px;display:flex;flex-direction:column;gap:2px;font-size:12.5px;color:#555;box-shadow:0 2px 10px rgba(0,0,0,.05)}
+.ckcard b{color:#111;font-size:13.5px}
+.cklabel{display:flex;justify-content:space-between;font-size:11.5px;color:#777}
+.cklabel a{color:#14302c;font-weight:600;text-decoration:none}
+.chips3{display:flex;gap:6px}.chip{flex:1;text-align:center;font-size:12px;padding:7px 4px;border-radius:10px;border:1px solid #d7dedc;background:#fff;color:#333}
+.chip.on{background:#14302c;border-color:#14302c;color:#fff}
+.pay{display:flex;align-items:center;gap:9px;font-size:13px;color:#222;padding:7px 10px;background:#fff;border-radius:10px;border:1px solid #e3e8e6}
+.radio{width:15px;height:15px;border-radius:50%;border:1.6px solid #9aa7a4;flex:0 0 15px;position:relative}
+.radio.on{border-color:#14302c}.radio.on::after{content:"";position:absolute;inset:2.5px;border-radius:50%;background:#14302c}
+.ckrow small{font-size:11px;color:#888;font-weight:400}
+.bug.shift{position:relative;left:-7px;top:1px;color:#178a55;font-weight:600}
+.bug.found:focus,.bug.found:focus-visible{outline:none}
+.ck .btnp{margin-top:4px}
+.bug.ok{color:#178a55;font-size:12px;font-weight:600}
+.ckcheck{display:flex;gap:9px;align-items:center;font-size:12.5px;color:#444}
+.ckcheck .box{width:18px;height:18px;border-radius:5px;background:#14302c;color:#fff;font-size:11px;display:flex;align-items:center;justify-content:center;flex:0 0 18px}
+.score .n{font:300 84px/1 Inter;letter-spacing:-.04em}
+.blog{display:flex;flex-direction:column;gap:10px;margin-top:14px;max-height:330px;overflow:auto}
+.blog div{padding:12px 14px;border-radius:14px;background:var(--panel);border:1px solid var(--line);font-size:14px;line-height:1.5}
+.blog b{color:var(--ok)}
+
+/* unlock */
+.unlock{padding:110px 0;text-align:center}
+.biglock{width:190px;height:190px;margin:34px auto 10px;border-radius:50%;border:1px solid var(--line2);display:flex;align-items:center;justify-content:center;cursor:pointer;position:relative;background:radial-gradient(circle,#1d3a36,#0d1817);color:var(--ink);transition:.5s}
+.biglock::before,.biglock::after{content:"";position:absolute;inset:-16px;border-radius:50%;border:1px solid var(--mint);opacity:0}
+.biglock.scan::before{animation:ping 1.2s infinite}.biglock.scan::after{animation:ping 1.2s .6s infinite}
+@keyframes ping{0%{transform:scale(.85);opacity:.7}100%{transform:scale(1.4);opacity:0}}
+.biglock.open{box-shadow:0 0 80px rgba(127,224,181,.25);border-color:var(--ok)}
+.apps{display:none;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:30px}
+.apps.show{display:flex}
+.apps a{font:500 13.5px Inter;text-decoration:none;border:1px solid var(--line2);border-radius:999px;padding:10px 16px;opacity:0;transform:translateY(12px);transition:.5s}
+.apps a.in{opacity:1;transform:none}
+.apps a:hover{background:rgba(185,214,206,.1)}
+
+/* factory */
+.factory{padding:110px 0;background:var(--bg2);border-top:1px solid var(--line)}
+.factory .grid{display:grid;grid-template-columns:1fr;gap:22px;margin-top:36px}
+.term{border-radius:20px;padding:22px;font:400 14px/1.85 var(--mono);color:#cfe9df;min-height:330px;background:#060b0a;border:1px solid var(--line)}
+.term .bar{display:flex;gap:7px;margin-bottom:12px}
+.term .bar i{width:11px;height:11px;border-radius:50%;background:#2a3634;display:block}
+.term .ok{color:var(--ok)}
+.video{border-radius:20px;border:1px dashed var(--line2);display:flex;align-items:center;justify-content:center;aspect-ratio:16/10;color:var(--muted);font:500 12px var(--mono);letter-spacing:.1em;text-transform:uppercase;background:radial-gradient(ellipse,#16302c,#0a1110 75%)}
+
+/* process */
+.process{padding:110px 0}
+.steps{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;margin-top:40px}
+.step{padding:22px;border-radius:18px;border:1px solid var(--line);background:var(--bg2);min-height:210px;display:flex;flex-direction:column;gap:8px}
+.step .n{font:500 12px var(--mono);color:var(--mint2)}
+.step h3{margin:0;font-size:19px;font-weight:600}
+.step p{margin:0;font-size:14px;color:var(--muted);line-height:1.5}
+.step.last{background:linear-gradient(160deg,#25433f,#0f1d1b);border-color:var(--line2)}
+
+/* contact */
+.contact{position:relative;overflow:hidden;padding:130px 0 40px;text-align:center;background:radial-gradient(ellipse at 50% 30%,#1d3a36,var(--bg) 65%);border-top:1px solid var(--line)}
+.contact h2{margin:22px 0 0;font:300 clamp(54px,9vw,128px)/1 Inter;letter-spacing:-.05em}
+.contact h2 b{font-weight:600}
+.contact .links2{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-top:36px}
+.foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-top:90px;padding-top:20px;border-top:1px solid var(--line)}
+
+
+/* carousels */
+.car{margin-top:36px;position:relative}
+.ctabs{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding-bottom:16px}
+.ctabs button{flex:0 0 auto;font:500 13px Inter;color:var(--muted);background:transparent;border:1px solid var(--line);border-radius:999px;padding:9px 15px;cursor:pointer;white-space:nowrap}
+.ctabs button[aria-selected="true"]{color:#0a1110;background:var(--ink);border-color:var(--ink)}
+.ctrack{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;outline:none}
+.ctrack::-webkit-scrollbar,.ctabs::-webkit-scrollbar{display:none}
+.slide{flex:0 0 100%;scroll-snap-align:start;min-width:0}
+.shead{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:18px}
+.shead h3{margin:6px 0 0;font:600 32px Inter;letter-spacing:-.02em}
+.shead p{margin:0;max-width:560px;color:var(--muted);font-size:16px}
+.sgrid{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);gap:14px;min-height:640px}
+.sgal{position:relative;min-height:640px}
+.sinfo{padding:26px;display:flex;flex-direction:column;gap:12px}
+.sinfo p{margin:0;font-size:18px;line-height:1.6;color:#d3e0dc}
+.sgal .shots{padding:26px 26px 0}
+.sgal .shots .row{align-items:flex-start;gap:16px}
+.sgal .shots .row img{width:31%;height:auto}
+.sgal .shots .row img:nth-child(n+4){display:none}
+.cnav{display:flex;justify-content:center;align-items:center;gap:18px;margin-top:20px}
+.carr{width:48px;height:48px;border-radius:50%;border:1px solid var(--line2);background:transparent;color:var(--ink);font-size:18px;cursor:pointer}
+.carr:hover{background:rgba(185,214,206,.1)}
+.appcar{max-width:980px;margin:34px auto 0}
+.aslide{display:flex;flex-direction:column;align-items:center;gap:16px}
+.aslide .sgal{width:100%;min-height:500px}
+.aslide .shots .row img{width:28%}
+/* mock product screens (no public app) */
+.mock{position:absolute;inset:22px;border-radius:14px;background:#0d1615;border:1px solid var(--line2);padding:16px;display:flex;flex-direction:column;gap:6px;overflow:hidden;font-size:13.5px}
+.mbar{display:flex;align-items:center;gap:6px;margin-bottom:8px}.mbar .dot{width:9px;height:9px;border-radius:50%;background:#2a3634}.mbar .mono{margin-left:8px}
+.mrow{display:grid;grid-template-columns:minmax(0,1fr) 70px 80px;gap:10px;padding:10px 8px;border-bottom:1px solid var(--line);color:#d3e0dc}
+.mrow.head{color:var(--muted);font:500 11px var(--mono);letter-spacing:.08em;text-transform:uppercase}
+.sev{font:500 11px var(--mono);text-align:center;border:1px solid var(--line2);border-radius:999px;padding:2px 8px;align-self:center}
+.sev.hi{color:#ffb4a8;border-color:rgba(255,140,120,.45)}
+.mfoot{margin-top:auto;padding-top:10px}
+.bars{flex:1;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;align-items:end;padding:10px 6px}
+.bars div{height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:6px}
+.bars i{display:block;width:70%;border-radius:8px 8px 2px 2px;background:linear-gradient(180deg,#b9d6ce,#3d6a61)}
+.bars span{font-size:13px;color:#d3e0dc}.bars b{font:500 10.5px var(--mono);color:var(--ok)}
+/* work card images */
+.case{position:relative}
+.case .cover{position:absolute;inset:0;z-index:2;border-radius:20px}
+.case:hover{border-color:var(--line2)}
+.case .img{display:flex;gap:12px;justify-content:center;align-items:flex-start;padding:22px 22px 0;background:radial-gradient(ellipse at 50% 30%,#24423e,#0c1615 75%)}
+.case .img img{width:40%;border-radius:12px 12px 0 0;border:1px solid var(--line2);border-bottom:0;box-shadow:0 14px 34px rgba(0,0,0,.45)}
+.case .img .mock{inset:16px;font-size:11px}
+.case .img .mrow{grid-template-columns:minmax(0,1fr) 46px 72px;padding:7px 6px}
+.case .img .sev{padding:2px 4px;font-size:10px}
+
+/* portrait flip on scroll */
+.pcard{perspective:1600px}
+.pinner{position:relative;transform-style:preserve-3d;transform-origin:50% 40%;will-change:transform}
+.pface{backface-visibility:hidden;-webkit-backface-visibility:hidden}
+.pback{position:absolute;inset:0;transform:rotateY(180deg);border-radius:26px;border:1px solid var(--line2);overflow:hidden;background:radial-gradient(ellipse at 50% 40%,#25433f,#0b1312 72%);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px}
+.pback .pbname{font:600 28px Inter;letter-spacing:-.02em;position:relative}
+.pback svg,.pback .mono{position:relative}
+.bflip{position:relative;width:30px;height:30px;perspective:300px;display:inline-block}
+.bflip .bf,.bflip .bb{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.bflip .bb{width:30px;height:30px;border-radius:9px;object-fit:cover;object-position:50% 18%;filter:grayscale(1) contrast(1.1);transform:rotateY(180deg);border:1px solid var(--line2)}
+.bflip.on .bf{transform:rotateY(-180deg)}.bflip.on .bb{transform:rotateY(0)}
+/* Apple-style motion */
+.statement{padding:140px 0 40px}
+.scrolltext{margin:0;font:600 clamp(32px,4.6vw,64px)/1.18 Inter;letter-spacing:-.03em;max-width:1100px}
+.scrolltext span{color:rgba(232,240,238,.16);transition:color .25s linear}
+.scrolltext span.lit{color:var(--ink)}
+.hero h1 .w{display:inline-block;opacity:0;filter:blur(10px);transform:translateY(18px);animation:wordIn .9s cubic-bezier(.2,.7,.2,1) forwards}
+@keyframes wordIn{to{opacity:1;filter:none;transform:none}}
+.hero .lead,.hero .ctas,.hero .mono{opacity:0;animation:fadeUp .9s .7s forwards}
+@keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.portrait{will-change:transform}
+.car{transform-origin:50% 0;will-change:transform}
+.slinks{display:flex;gap:10px;flex-wrap:wrap;margin-top:auto}
+@media (max-width:1000px){.sgrid{grid-template-columns:1fr}.sgal{min-height:420px}.sgal .shots .row img{width:31%}}
+@media (max-width:1000px){
+  .links{display:none}
+  .hero .wrap,.twin .grid,.hunt .grid,.factory .grid{grid-template-columns:1fr}
+  .collage{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:170px}
+  .collage .tile{grid-column:span 1!important;grid-row:span 2!important}
+  .mgrid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .cases{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr 1fr}
+}
+@media (max-width:560px){.wrap{padding:0 16px}.mgrid,.steps,.collage{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <!-- personal mark: TS monogram in a rounded square, with a pass tick in the corner -->
+    <symbol id="mark" viewBox="0 0 40 40">
+      <rect x="3" y="3" width="34" height="34" rx="10" fill="none" stroke="currentColor" stroke-width="2.4"/>
+      <text x="20" y="25.6" text-anchor="middle" fill="currentColor" font-family="Inter,Arial,sans-serif" font-weight="700" font-size="14" letter-spacing="-.4">TS</text>
+    </symbol>
+  </defs>
+</svg>
+
+<nav class="top"><div class="wrap">
+  <a class="brand" href="#top"><span class="bflip" id="bflip"><svg class="bf" width="30" height="30" style="color:var(--ink)"><use href="#mark"/></svg><img class="bb" src="tanmay.jpg" alt=""></span>Tanmay Saxena</a>
+  <div class="links" id="spy">
+    <a href="#ask">Ask</a><a href="#work">Work</a><a href="#bug-hunt">Bug hunt</a><a href="#factory">QA Factory</a>
+  </div>
+  <a class="btn solid" href="#contact">Get in touch</a>
+</div></nav>
+
+<header class="hero" id="top">
+  <div class="rain" id="rain" aria-hidden="true"></div>
+  <div class="wrap">
+    <div>
+      <span class="mono">Senior QA Engineer · Web · Mobile · IoT · AI</span>
+      <h1>Transforming chaos<br>into <b>precision.</b></h1>
+      <p class="lead">I take products from first build to a clean launch. Five years owning quality for Godrej's smart locks, with Playwright, Appium and AI agents doing the heavy lifting.</p>
+      <div class="ctas"><a class="btn solid" href="#ask">Ask my AI twin</a><a class="btn" href="#work">See the work</a></div>
+    </div>
+    <div class="pcard reveal"><div class="pinner" id="pinner">
+    <div class="portrait pface" aria-label="Portrait of Tanmay Saxena">
+      <img class="me" src="tanmay.jpg" alt="Tanmay Saxena"><div class="tint"></div>
+      <div class="overlay" id="pover" aria-hidden="true"></div>
+    </div>
+      <div class="pback pface" aria-hidden="true"><div class="rain" data-rain="8"></div><svg width="150" height="150" style="color:var(--ink)"><use href="#mark"/></svg><div class="pbname">Tanmay Saxena</div><span class="mono">Senior QA Engineer</span></div>
+    </div></div>
+  </div>
+</header>
+
+<section class="twin" id="ask"><div class="wrap">
+  <span class="mono reveal">01 · Ask me first</span>
+  <h2 class="h reveal" style="margin:14px 0 36px">Don't read my resume.<br><b>Ask it.</b></h2>
+  <div class="grid">
+    <div class="glass profile reveal">
+      <div class="row"><img class="av" src="tanmay.jpg" alt="" style="object-fit:cover;object-position:50% 18%;filter:grayscale(1) contrast(1.1)"><a class="btn solid" href="https://www.linkedin.com/in/tanmay-saxena-4110061b4" target="_blank" rel="noopener" style="padding:8px 16px">Follow</a></div>
+      <h3>Tanmay Saxena</h3>
+      <div class="handle">@tanmaysaxena · Senior QA Engineer</div>
+      <p style="margin:10px 0 0;font-size:15px">Transforming chaos into precision.</p>
+      <div class="facts"><span>◎ Binaryveda · since Jul 2021</span><span>⌖ Mumbai, India</span><span>↗ github.com/tanmaysaxena112-ux</span></div>
+      <div class="counts"><span><b>Web</b></span><span><b>Mobile</b></span><span><b>IoT</b></span><span><b>AI</b></span></div>
+    </div>
+    <div>
+      <div class="glass chat reveal" id="chat" aria-live="polite"><div class="msg ai">Hi, I'm Tanmay's AI twin. I only answer from his verified work history. Pick a question.</div></div>
+      <div class="chips" id="chips"></div>
+    </div>
+  </div>
+</div></section>
+
+<section class="statement" aria-label="Statement"><div class="wrap">
+  <p class="scrolltext" id="scrolltext">I take products from the first build to launch day. I test the app, the device, the API and the AI. I automate what repeats, explore what doesn't, and I don't sign off until it's right.</p>
+</div></section>
+
+<section class="ident" id="work" aria-label="Work"><div class="wrap">
+  <span class="mono reveal">02 · Work</span>
+  <h2 class="h reveal" style="margin-top:14px">Engineered for <b>flawless launches.</b></h2>
+  <div class="car" id="workcar">
+    <div class="ctabs" role="tablist" aria-label="Projects"></div>
+    <div class="ctrack" tabindex="0" aria-label="Project carousel">
+<div class="slide" id="p-godrej" data-name="Godrej Smart Locks"><div class="shead"><div><span class="mono">2021 – now · IoT</span><h3>Godrej Smart Locks</h3></div><p>App-controlled door locks for homes and hotels. QA owner from day one: every app built from scratch and launched with zero bugs in production.</p></div>  <div class="collage" style="margin-top:0">
+    <div class="tile dark t-building reveal"><div class="shots"><div class="cap"><b>Advantis Smartlocks</b><span class="mono">Home app · Android &amp; iOS</span></div><div class="row"><img src="shots/home-app.jpg" alt="Advantis Smartlocks home screen showing My Home, door, battery and status" loading="lazy"><img src="shots/home-lock.jpg" alt="Lock control panel showing Room is locked" loading="lazy"><img src="shots/home-activity.jpg" alt="Activity trail listing who unlocked the door and how" loading="lazy"></div></div></div>
+    <div class="tile dark t-badge reveal" aria-hidden="true"><div class="lanyard"></div><div class="badge"><div style="display:flex;justify-content:space-between;align-items:flex-start"><svg width="36" height="36" style="color:var(--ink)"><use href="#mark"/></svg><img src="tanmay.jpg" alt="" style="width:58px;height:70px;border-radius:8px;object-fit:cover;object-position:50% 15%;filter:grayscale(1) contrast(1.1);border:1px solid rgba(185,214,206,.3)"></div><div><div style="font-weight:600">Tanmay Saxena</div><div class="mono" style="color:#b9d6ce">Senior QA · ID 2021</div></div><div class="bar"></div></div></div>
+    <div class="tile teal t-screen reveal"><div class="shots"><div class="cap"><b>Smartwatch unlock</b><span class="mono">Wear OS</span></div><div class="watch"><img src="shots/watch-unlocked.png" alt="Watch app showing Flat Entrance unlocked" loading="lazy"><img src="shots/watch-locked.png" alt="Watch app showing Flat Entrance locked" loading="lazy"></div></div></div>
+    <div class="tile dark t-phone reveal"><div class="shots"><div class="cap"><b>Catus GSL Guest</b><span class="mono">Hotel guests</span></div><div class="row"><img class="pair" src="shots/guest-welcome.jpg" alt="Guest app welcome screen with booked room details" loading="lazy"><img class="pair" src="shots/guest-room.jpg" alt="Guest app room lock screen" loading="lazy"></div></div></div>
+    <div class="tile teal t-stat reveal"><div class="bigstat"><span class="mono" style="color:#b9d6ce">Godrej smart locks</span><div class="v" style="font-size:52px;line-height:1.05">Zero bugs<br>in production.</div><span style="font-size:14px;color:#c2d2ce">Every smart-lock app, built from scratch and launched clean.</span></div></div>
+    <div class="tile dark t-dock reveal"><div class="shots"><div class="cap"><b>Catus GSL Staff</b><span class="mono">Hotel staff</span></div><div class="row"><img class="solo" src="shots/staff-rooms.jpg" alt="Staff app list of hotel rooms with occupants" loading="lazy"></div></div></div>
+  </div></div>
+<div class="slide" id="p-dtdc" data-name="DTDC"><div class="shead"><div><span class="mono">Logistics · Web &amp; mobile</span><h3>DTDC</h3></div><p>India-wide courier network: parcel and passport booking on web and the MyDTDC app.</p></div>
+  <div class="sgrid"><div class="tile dark sgal"><div class="shots"><div class="row"><img src="shots/dtdc-1.jpg" alt="DTDC screen 1" loading="lazy"><img src="shots/dtdc-2.jpg" alt="DTDC screen 2" loading="lazy"><img src="shots/dtdc-3.jpg" alt="DTDC screen 3" loading="lazy"><img src="shots/dtdc-4.jpg" alt="DTDC screen 4" loading="lazy"></div></div></div><div class="glass sinfo"><span class="mono">What I did</span><p>Automated the repetitive regression with Playwright and spent the time saved on edge cases. Compared Figma with the live app using MCP and caught copy drift and a missing nav item.</p><div class="slinks"><a class="btn" href="https://play.google.com/store/apps/details?id=com.ship.ebooking" target="_blank" rel="noopener">Play Store ↗</a></div></div></div></div>
+<div class="slide" id="p-sophius" data-name="Sophius AI"><div class="shead"><div><span class="mono">GenAI · Aditya Birla Group</span><h3>Sophius AI</h3></div><p>A ChatGPT-style research assistant: documents, charts, images, video and database answers.</p></div>
+  <div class="sgrid"><div class="tile dark sgal"><div class="shots"><div class="row"><img src="shots/sophius-1.jpg" alt="Sophius AI screen 1" loading="lazy"><img src="shots/sophius-2.jpg" alt="Sophius AI screen 2" loading="lazy"><img src="shots/sophius-3.jpg" alt="Sophius AI screen 3" loading="lazy"><img src="shots/sophius-4.jpg" alt="Sophius AI screen 4" loading="lazy"></div></div></div><div class="glass sinfo"><span class="mono">What I did</span><p>Tested every AI research mode on web, mobile and tablet, and reported inappropriate and irrelevant answers alongside functional and layout bugs.</p><div class="slinks"><a class="btn" href="https://play.google.com/store/apps/details?id=com.adityabirlagroup.sophius" target="_blank" rel="noopener">Play Store ↗</a></div></div></div></div>
+<div class="slide" id="p-elivaas" data-name="Elivaas"><div class="shead"><div><span class="mono">Hospitality · Villa rentals</span><h3>Elivaas</h3></div><p>Luxury villa rentals with apps for guests, homeowners and housekeeping.</p></div>
+  <div class="sgrid"><div class="tile dark sgal"><div class="shots"><div class="row"><img src="shots/elivaas-1.jpg" alt="Elivaas screen 1" loading="lazy"><img src="shots/elivaas-2.jpg" alt="Elivaas screen 2" loading="lazy"><img src="shots/elivaas-3.jpg" alt="Elivaas screen 3" loading="lazy"></div></div></div><div class="glass sinfo"><span class="mono">What I did</span><p>Signed off all three apps end to end: booking, owner earnings and housekeeping flows.</p><div class="slinks"><a class="btn" href="https://apps.apple.com/in/app/ownerapp-elivaas/id6451092771" target="_blank" rel="noopener">App Store ↗</a></div></div></div></div>
+<div class="slide" id="p-waya" data-name="WAYA"><div class="shead"><div><span class="mono">Fintech · Stock trading</span><h3>WAYA</h3></div><p>A stock-trading and advisory app with buy and sell calls.</p></div>
+  <div class="sgrid"><div class="tile dark sgal"><div class="shots"><div class="row"><img src="shots/waya-1.jpg" alt="WAYA screen 1" loading="lazy"><img src="shots/waya-2.jpg" alt="WAYA screen 2" loading="lazy"><img src="shots/waya-3.jpg" alt="WAYA screen 3" loading="lazy"><img src="shots/waya-4.jpg" alt="WAYA screen 4" loading="lazy"></div></div></div><div class="glass sinfo"><span class="mono">What I did</span><p>Took the app live, signing off every release phase end to end.</p><div class="slinks"><a class="btn" href="https://apps.apple.com/in/app/waya-max-your-stock-earnings/id1663159216" target="_blank" rel="noopener">App Store ↗</a></div></div></div></div>
+<div class="slide" id="p-simple" data-name="Simple Energy"><div class="shead"><div><span class="mono">EV · Scooter app</span><h3>Simple Energy</h3></div><p>The companion app for an Indian electric scooter: battery, range, ride modes and tracking.</p></div>
+  <div class="sgrid"><div class="tile dark sgal"><div class="shots"><div class="row"><img src="shots/simple-1.jpg" alt="Simple Energy screen 1" loading="lazy"><img src="shots/simple-2.jpg" alt="Simple Energy screen 2" loading="lazy"><img src="shots/simple-3.jpg" alt="Simple Energy screen 3" loading="lazy"><img src="shots/simple-4.jpg" alt="Simple Energy screen 4" loading="lazy"></div></div></div><div class="glass sinfo"><span class="mono">What I did</span><p>Took the scooter dashboard and app live, signing off battery, speed and ride-control features.</p><div class="slinks"><a class="btn" href="https://apps.apple.com/in/app/simple-connect/id6756171156" target="_blank" rel="noopener">App Store ↗</a></div></div></div></div>
+<div class="slide" id="p-carbonx" data-name="CarbonX"><div class="shead"><div><span class="mono">Climate-tech · Web portals</span><h3>CarbonX</h3></div><p>A carbon-emissions platform for Dubai-based projects, with client and admin portals.</p></div>
+  <div class="sgrid"><div class="tile dark sgal"><div class="shots"><div class="mock">
+  <div class="mbar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="mono">carbonx · findings</span></div>
+  <div class="mrow head"><span>Finding</span><span>Area</span><span>Severity</span></div>
+  <div class="mrow"><span>Admin API returns data without a role check</span><span>Admin</span><span class="sev hi">Security</span></div>
+  <div class="mrow"><span>Emission totals don't refresh after edit</span><span>Client</span><span class="sev hi">P1</span></div>
+  <div class="mrow"><span>Project filter resets on pagination</span><span>Client</span><span class="sev">P2</span></div>
+  <div class="mrow"><span>Export ignores the selected date range</span><span>Admin</span><span class="sev hi">P1</span></div>
+  <div class="mrow"><span>Session stays alive after logout</span><span>Auth</span><span class="sev hi">Security</span></div>
+  <div class="mfoot mono">explored with Claude Code + Playwright MCP · cross-checked with dev lead</div>
+</div></div></div><div class="glass sinfo"><span class="mono">What I did</span><p>Ran AI-agent exploratory testing that turned a full day of clicking into minutes, and found a missing role check on an admin API.</p></div></div></div>
+<div class="slide" id="p-prinics" data-name="Prinics · Kodak"><div class="shead"><div><span class="mono">Consumer app · iOS · Android · HarmonyOS</span><h3>Prinics · KODAK Photo Printer</h3></div><p>The companion app for Kodak's instant photo printers: pick photos, edit, connect over Bluetooth and print. Plus a global sales dashboard.</p></div>
+  <div class="sgrid"><div class="tile dark sgal"><div class="shots"><div class="row"><img src="shots/kodak-ios-1.jpg" alt="KODAK Photo Printer photo picker on iOS" loading="lazy"><img src="shots/kodak-ios-2.jpg" alt="KODAK Photo Printer print preview on iOS" loading="lazy"><img src="shots/kodak-and-1.jpg" alt="KODAK Photo Printer albums on Android" loading="lazy"><img src="shots/kodak-and-2.jpg" alt="KODAK Photo Printer editor on Android" loading="lazy"></div></div></div><div class="glass sinfo"><span class="mono">What I did</span><p>Tested the KODAK Photo Printer app on all three platforms: iOS, Android and HarmonyOS. Also validated the sales dashboard across Amazon, Shopify, Walmart and TikTok against database exports, with zero mismatches.</p><div class="slinks"><a class="btn" href="https://apps.apple.com/in/app/kodak-photo-printer/id1555650275" target="_blank" rel="noopener">App Store ↗</a><a class="btn" href="https://play.google.com/store/apps/details?id=com.prinics.kodak.photoprinter" target="_blank" rel="noopener">Play Store ↗</a></div></div></div></div>
+    </div>
+    <div class="cnav"><button class="carr" data-d="-1" aria-label="Previous project">←</button><span class="mono ccount"></span><button class="carr" data-d="1" aria-label="Next project">→</button></div>
+  </div>
+</div></section>
+
+<section class="hunt" id="bug-hunt"><div class="wrap grid">
+  <div class="reveal">
+    <span class="mono">03 · Play</span>
+    <h2 class="h" style="margin-top:14px">I find bugs before users do. <b>Can you find 5?</b></h2>
+    <p style="color:var(--muted)">This checkout looks finished. It isn't. Five bugs are hiding in it: logic, validation, dates and one tiny UI slip. Tap each one you spot.</p>
+  </div>
+  <div class="phone reveal" aria-label="Demo checkout screen with five hidden bugs">
+    <div class="bar"><span>9:41</span><span>●●●</span></div>
+    <div class="ck">
+      <div class="ckhead"><span class="ckback" aria-hidden="true">‹</span><b>Checkout</b><span class="ckstep">Step 2 of 3</span></div>
+      <div class="steps3" aria-hidden="true"><i class="done"></i><i class="cur"></i><i></i></div>
+      <div class="ckitem"><div class="thumb" aria-hidden="true"></div><div><b>Wireless Earbuds</b><span>Black · Qty 1</span></div>
+        <div class="stepper"><button type="button" aria-label="Decrease">−</button><span class="bug" data-b="0" tabindex="0" role="button">2</span><button type="button" aria-label="Increase">+</button></div></div>
+      <div class="ckcard"><div class="cklabel">Deliver to <a href="#bug-hunt" onclick="return false">Change</a></div><b>Rahul Sharma</b><span>Flat 402, Sea View CHS, Andheri West, Mumbai 400053</span><span class="bug" data-b="1" tabindex="0" role="button">+91 98765 4321</span></div>
+      <div class="cklabel">Delivery slot</div>
+      <div class="chips3"><span class="chip">Today</span><span class="chip on">Tomorrow</span><span class="chip bug" data-b="4" tabindex="0" role="button">Sat, 31 Nov</span></div>
+      <div class="cklabel">Pay with</div>
+      <div class="pay"><span class="radio on" aria-hidden="true"></span>UPI · rahul@okaxis</div>
+      <div class="pay bug" data-b="2" tabindex="0" role="button"><span class="radio on" aria-hidden="true"></span>Credit / debit card</div>
+      <div class="pay"><span class="radio" aria-hidden="true"></span>Cash on delivery</div>
+      <div class="ckrow"><span>Item total</span><span>₹1,200</span></div>
+      <div class="ckrow"><span>Delivery</span><span class="bug shift" data-b="3" tabindex="0" role="button">FREE</span></div>
+      <div class="ckrow tot"><span>To pay <small>incl. GST</small></span><span>₹1,200</span></div>
+      <button class="btnp" type="button">Pay ₹1,200</button>
+    </div>
+  </div>
+  <div class="score reveal">
+    <span class="mono">Bugs found</span>
+    <div class="n"><span id="bfound">0</span><span style="color:var(--muted)">/5</span></div>
+    <div class="blog" id="blog"><div style="color:var(--muted)">Start tapping the screen.</div></div>
+    <button id="bhint" class="btn" type="button" style="margin-top:12px">Stuck? Get a hint</button>
+    <a id="bdone" class="btn solid" href="#contact" style="display:none;margin-top:16px">Sharp eyes. Let's talk →</a>
+  </div>
+</div></section>
+
+<section class="factory" id="factory"><div class="wrap">
+  <span class="mono reveal">04 · Personal project</span>
+  <h2 class="h reveal" style="margin-top:14px">QA Factory: <b>14 AI agents,<br>one release decision.</b></h2>
+  <p class="reveal" style="max-width:720px;color:#c2d2ce">Agents turn a requirement into Playwright, Appium and API tests. Plain-code runners execute them, a blind AI reviewer judges, and a human approves the release. <a href="https://github.com/tanmaysaxena112-ux/qa-factory" target="_blank" rel="noopener">github.com/tanmaysaxena112-ux/qa-factory ↗</a></p>
+  <div class="grid">
+    <div class="term reveal" id="term"><div class="bar"><i></i><i></i><i></i></div><div id="termout"></div></div>
+      </div>
+</div></section>
+
+<section class="process" id="process"><div class="wrap">
+  <span class="mono reveal">05 · Method</span>
+  <h2 class="h reveal" style="margin-top:14px">From day one <b>to launch day.</b></h2>
+  <div class="steps">
+    <div class="step reveal"><span class="n">01</span><h3>Requirements</h3><p>Test cases from the first requirement. 460+ by launch.</p></div>
+    <div class="step reveal"><span class="n">02</span><h3>Shift-left</h3><p>Figma test-ID spec, so developers add identifiers before screens exist.</p></div>
+    <div class="step reveal"><span class="n">03</span><h3>Device to cloud</h3><p>Lock, firmware, app, portal and backend tested together.</p></div>
+    <div class="step reveal"><span class="n">04</span><h3>Speed</h3><p>Automation and AI agents take the repetitive work; I take the edge cases.</p></div>
+    <div class="step last reveal"><span class="n">05</span><h3>Launch</h3><p style="color:#d3e0dc">Live on the Play Store and App Store, with zero production bugs.</p></div>
+  </div>
+</div></section>
+
+<footer class="contact" id="contact">
+  <div class="rain" data-rain="14" aria-hidden="true"></div>
+  <div class="wrap" style="position:relative">
+    <svg width="72" height="72" style="color:var(--ink)" aria-hidden="true"><use href="#mark"/></svg>
+    <h2>Let's ship it<br><b>clean.</b></h2>
+    <div class="links2">
+      <a class="btn solid" href="mailto:tanmaysaxena112@gmail.com">tanmaysaxena112@gmail.com</a>
+      <a class="btn" href="https://www.linkedin.com/in/tanmay-saxena-4110061b4" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a class="btn" href="https://github.com/tanmaysaxena112-ux" target="_blank" rel="noopener">GitHub ↗</a>
+      <a class="btn" href="resume.pdf" target="_blank" rel="noopener">Resume (PDF) ↗</a>
+    </div>
+    <div class="foot"><span class="mono">© 2026 Tanmay Saxena · Mumbai</span><span class="mono">Anonymous analytics (Clarity, Google Analytics) help me improve this site.</span></div>
+  </div>
+</footer>
+
+<script>
+// data rain (test-log style)
+const words=['PASS','ASSERT','BLE_OK','OTA 2.4.1','EXPECT','200 OK','RETRY 0','UNLOCK','FW_HASH','STEP 04','TC-0'+'0','E2E','ID 2021','SYNC','0 ERR'];
+function rainCol(n){let s='';for(let i=0;i<n;i++){s+=(Math.random()<.5?words[Math.floor(Math.random()*words.length)]:Math.random().toString(16).slice(2,8).toUpperCase())+'  '+String(Math.floor(Math.random()*99)).padStart(2,'0')+':'+String(Math.floor(Math.random()*59)).padStart(2,'0')+'\n';}return s;}
+function makeRain(el,cols){for(let c=0;c<cols;c++){const p=document.createElement('pre');p.textContent=rainCol(60);p.style.left=(c/cols*100)+'%';p.style.animationDuration=(18+Math.random()*22)+'s';p.style.animationDelay=(-Math.random()*30)+'s';el.appendChild(p);}}
+makeRain(document.getElementById('rain'),14);
+document.querySelectorAll('[data-rain]').forEach(el=>makeRain(el,+el.dataset.rain));
+document.getElementById('pover').textContent=rainCol(40).split('\n').map(l=>'         '.slice(Math.random()*9)+l).join('\n');
+document.querySelectorAll('[data-code]').forEach(p=>p.textContent=rainCol(18));
+
+// reveal + count-ups
+const done=new WeakSet();
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;e.target.classList.add('in');e.target.querySelectorAll('.count').forEach(c=>{if(done.has(c))return;done.add(c);const f=+c.dataset.from,t=+c.dataset.to,t0=performance.now();const st=n=>{const p=Math.min(1,(n-t0)/1400),v=Math.round(f+(t-f)*(1-Math.pow(1-p,3)));c.textContent=v.toLocaleString();if(p<1)requestAnimationFrame(st)};requestAnimationFrame(st)});if(e.target.id==='term')typeTerm();}),{threshold:.2});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+// scrollspy
+const spy=[...document.querySelectorAll('#spy a')];
+const so=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)spy.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id))}),{rootMargin:'-45% 0px -50% 0px'});
+['ask','work','bug-hunt','factory'].forEach(id=>so.observe(document.getElementById(id)));
+
+// AI twin
+const QA={
+ 'What has Tanmay shipped?':'He owned QA for Godrej\'s smart-lock program from day one, when it was built from scratch. All four apps launched with zero production bugs. He also took Simple Energy\'s EV-scooter app and WAYA\'s stock-trading app live.',
+ 'How does he use AI in testing?':'Every day. Claude Code with Playwright MCP and Figma MCP on client projects. On CarbonX an 8-hour exploratory pass took 5 minutes and found 44 bugs and 5 security issues. He also built QA Factory, a 14-agent AI QA pipeline.',
+ 'What is his automation stack?':'Playwright with TypeScript for web, Appium and WebdriverIO for mobile, Postman for APIs, plus GitHub Actions and Allure. On DTDC his automation cut the test cycle by about half.',
+ 'Does he know IoT?':'Five years on Godrej smart locks: 6 lock models, Bluetooth and remote unlock, fingerprint, PIN, RFID, OTA firmware, and hotel guest and staff apps.',
+ 'Can he test GenAI apps?':'Yes. He tested Sophius, Aditya Birla Group\'s ChatGPT-style assistant, for inappropriate and irrelevant answers across its research modes on web, mobile and tablet.',
+ 'Where is he based?':'Mumbai, India. The quickest way to reach him is tanmaysaxena112@gmail.com.'
+};
+const chat=document.getElementById('chat'),chips=document.getElementById('chips');
+Object.keys(QA).forEach(q=>{const b=document.createElement('button');b.type='button';b.textContent=q;b.onclick=()=>{track('ai_twin_question',{question:q});const me=document.createElement('div');me.className='msg me';me.textContent=q;chat.appendChild(me);const ty=document.createElement('div');ty.className='typing';ty.textContent='twin is typing…';chat.appendChild(ty);setTimeout(()=>{ty.remove();const m=document.createElement('div');m.className='msg ai';m.textContent=QA[q];chat.appendChild(m);},650);};chips.appendChild(b);});
+
+// bug hunt
+const facts=['The card says Qty 1 but the stepper says 2. <b>Real:</b> I check that state stays in sync across screens, app, web portal and backend.','That mobile number has only 9 digits. <b>Real:</b> I write negative and boundary tests for every input, not just the happy path.','Two payment methods are selected at once. <b>Real:</b> I test component behaviour against the design, with AI agents comparing Figma to the build.','"FREE" sits a few pixels off the column. <b>Real:</b> my design-vs-build visual checks (pixel diff + OCR) catch exactly this kind of slip.','November has only 30 days. <b>Real:</b> dates, time zones and boundaries are on every test plan I write.'];
+const hints=['Compare the item card with its own controls.','Count the digits.','Look at the payment options.','Look at how the prices line up.','Check the calendar.'];
+const found=new Set();
+const huntFound=i=>found.has(i);
+document.getElementById('bhint').addEventListener('click',()=>{track('bug_hint');const i=[0,1,2,3,4].find(j=>!huntFound(j));if(i===undefined)return;const log=document.getElementById('blog');if(!found.size)log.innerHTML='';const d=document.createElement('div');d.innerHTML='💡 Hint: '+hints[i];log.prepend(d);});
+document.querySelectorAll('#bug-hunt .bug').forEach(el=>el.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();el.click();}}));
+document.querySelectorAll('#bug-hunt .bug').forEach(el=>el.addEventListener('click',()=>{const i=+el.dataset.b;if(found.has(i))return;found.add(i);track('bug_found',{bug:i,count:found.size});if(found.size===5)track('bug_hunt_complete');el.classList.add('found');document.getElementById('bfound').textContent=found.size;const log=document.getElementById('blog');if(found.size===1&&!log.textContent.includes('Hint'))log.innerHTML='';const d=document.createElement('div');d.innerHTML='🐞 '+facts[i];log.prepend(d);if(found.size===5){document.getElementById('bdone').style.display='inline-flex';document.getElementById('bhint').style.display='none';}}));
+
+
+// carousels: tabs, arrows, swipe, deep links from the work cards
+function setupCar(car){
+  if(car.dataset.ready)return;car.dataset.ready=1;
+  const track=car.querySelector('.ctrack'),slides=[...track.children],count=car.querySelector('.ccount'),tabs=car.querySelector('.ctabs');
+  let idx=0;
+  const go=i=>{idx=(i+slides.length)%slides.length;track('project_view',{project:slides[idx].dataset.name});track.scrollTo({left:slides[idx].offsetLeft-track.offsetLeft,behavior:'smooth'});mark();};
+  const mark=()=>{count.textContent=(slides[idx].dataset.name||'')+'  ·  '+(idx+1)+' / '+slides.length;if(tabs)[...tabs.children].forEach((b,j)=>b.setAttribute('aria-selected',j===idx));};
+  if(tabs)slides.forEach((sl,j)=>{const b=document.createElement('button');b.type='button';b.setAttribute('role','tab');b.textContent=sl.dataset.name;b.onclick=()=>go(j);tabs.appendChild(b);});
+  car.querySelectorAll('.carr').forEach(b=>b.onclick=()=>go(idx+ +b.dataset.d));
+  track.addEventListener('keydown',e=>{if(e.key==='ArrowRight')go(idx+1);if(e.key==='ArrowLeft')go(idx-1);});
+  let t;track.addEventListener('scroll',()=>{clearTimeout(t);t=setTimeout(()=>{const x=track.scrollLeft;let best=0;slides.forEach((sl,j)=>{if(Math.abs(sl.offsetLeft-track.offsetLeft-x)<Math.abs(slides[best].offsetLeft-track.offsetLeft-x))best=j});idx=best;mark();},90)});
+  car.goTo=key=>{const j=slides.findIndex(sl=>sl.id==='p-'+key);if(j>=0)go(j);};
+  mark();
+}
+const workcar=document.getElementById('workcar');setupCar(workcar);
+document.querySelectorAll('[data-go]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();document.getElementById('work').scrollIntoView({behavior:'smooth'});setTimeout(()=>workcar.goTo(a.dataset.go),450);}));
+
+// Apple-style motion: hero words, scroll-lit statement, scroll-linked scale
+(()=>{const h=document.querySelector('.hero h1');let n=0;const walk=node=>{[...node.childNodes].forEach(c=>{if(c.nodeType===3){const f=document.createDocumentFragment();c.textContent.split(/(\s+)/).forEach(t=>{if(!t.trim()){f.appendChild(document.createTextNode(t));return;}const sp=document.createElement('span');sp.className='w';sp.style.animationDelay=(n++*0.09)+'s';sp.textContent=t;f.appendChild(sp);});c.replaceWith(f);}else if(c.nodeType===1&&c.tagName!=='BR')walk(c);});};walk(h);})();
+const st=document.getElementById('scrolltext');st.innerHTML=st.textContent.split(' ').map(w=>'<span>'+w+'</span>').join(' ');
+const stWords=[...st.children],portrait=document.getElementById('pinner'),heroEl=document.querySelector('.hero'),bflip=document.getElementById('bflip'),car=document.getElementById('workcar');
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+function onScroll(){const vh=innerHeight;
+  const r=st.getBoundingClientRect();const p=Math.min(1,Math.max(0,(vh*0.85-r.top)/(r.height+vh*0.35)));const lit=Math.round(p*stWords.length);stWords.forEach((w,i)=>w.classList.toggle('lit',i<lit));
+  if(reduce)return;
+  const hh=heroEl.offsetHeight,y=scrollY,fp=Math.min(1,Math.max(0,(y-hh*0.18)/(hh*0.55)));
+  const e=fp<.5?2*fp*fp:1-Math.pow(-2*fp+2,2)/2;
+  portrait.style.transform='translateY('+(y*0.12)+'px) rotateY('+(e*180)+'deg) scale('+(1-0.42*e)+')';
+  portrait.style.opacity=fp>0.96?Math.max(0,1-(fp-0.96)*25):1;
+  const cr=car.getBoundingClientRect();const cp=Math.min(1,Math.max(0,(vh-cr.top)/(vh*0.7)));car.style.transform='scale('+(0.92+0.08*cp)+')';car.style.opacity=0.4+0.6*cp;}
+addEventListener('scroll',()=>requestAnimationFrame(onScroll),{passive:true});onScroll();
+addEventListener('scroll',()=>bflip.classList.toggle('on',scrollY>heroEl.offsetHeight*0.62),{passive:true});
+
+// terminal
+let typed=false;
+function typeTerm(){if(typed)return;typed=true;const lines=['$ npx playwright test --project=career','Running 6 suites with 1 worker…','<span class="ok">✓</span> godrej-smart-locks   4 apps · 0 production bugs','<span class="ok">✓</span> dtdc                 test cycle −50%','<span class="ok">✓</span> carbonx              8h → 5 min · 44 bugs','<span class="ok">✓</span> prinics-kodak        3,100+ values · 0 mismatches','<span class="ok">✓</span> simple-energy, waya  taken live','<span class="ok">✓</span> qa-factory           16/16 planted bugs caught','','<span class="ok">6 passed</span> (5 years) · Execution completed with zero errors.'];const o=document.getElementById('termout');let i=0;const t=setInterval(()=>{o.insertAdjacentHTML('beforeend',lines[i]+'<br>');if(++i>=lines.length)clearInterval(t)},320);}
+
+// outbound links, resume downloads and how far people get
+document.addEventListener('click',e=>{const a=e.target.closest('a[href]');if(!a)return;const h=a.getAttribute('href');
+  if(/resume\.pdf/.test(h))track('resume_download');else if(/^mailto:/.test(h))track('email_click');else if(/linkedin\.com/.test(h))track('linkedin_click');else if(/github\.com/.test(h))track('github_click');else if(/apps\.apple|play\.google/.test(h))track('store_click',{url:h});});
+(()=>{const seen=new Set();const so2=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting&&!seen.has(e.target.id)){seen.add(e.target.id);track('section_view',{section:e.target.id});}}),{threshold:.4});document.querySelectorAll('section[id],footer[id]').forEach(x=>so2.observe(x));})();
+</script>
+</body>
+</html>
